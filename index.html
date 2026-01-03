@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Calculator — Interactive</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet (separate file) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- math.js for safe expression evaluation (must load before script.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js" defer></script>
+
+  <!-- Main JS (separate file) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="card" role="application" aria-label="Advanced calculator">
+      <header class="card-header">
+        <div class="brand">
+          <h1 class="title">Advanced Calculator</h1>
+          <p class="subtitle">Fast, accurate & beautifully designed</p>
+        </div>
+
+        <div class="header-actions">
+          <button id="copy-result" class="icon-btn" title="Copy result" aria-label="Copy result">📋</button>
+          <button id="theme-toggle" class="icon-btn" aria-pressed="false" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+        </div>
+      </header>
+
+      <div class="display-wrap">
+        <label for="display" class="sr-only">Calculator display</label>
+        <input id="display" class="display" type="text" readonly aria-live="polite" value="0">
+      </div>
+
+      <div class="pad-and-history">
+        <div class="pad" role="group" aria-label="Calculator buttons">
+          <button type="button" class="btn btn-accent" data-action="clear" aria-label="clear">C</button>
+          <button type="button" class="btn" data-value="(" aria-label="open parenthesis">(</button>
+          <button type="button" class="btn" data-value=")" aria-label="close parenthesis">)</button>
+          <button type="button" class="btn" data-action="backspace" aria-label="backspace">⌫</button>
+
+          <button type="button" class="btn" data-value="7">7</button>
+          <button type="button" class="btn" data-value="8">8</button>
+          <button type="button" class="btn" data-value="9">9</button>
+          <button type="button" class="btn btn-op" data-value="/" aria-label="divide">÷</button>
+
+          <button type="button" class="btn" data-value="4">4</button>
+          <button type="button" class="btn" data-value="5">5</button>
+          <button type="button" class="btn" data-value="6">6</button>
+          <button type="button" class="btn btn-op" data-value="*" aria-label="multiply">×</button>
+
+          <button type="button" class="btn" data-value="1">1</button>
+          <button type="button" class="btn" data-value="2">2</button>
+          <button type="button" class="btn" data-value="3">3</button>
+          <button type="button" class="btn btn-op" data-value="-" aria-label="subtract">−</button>
+
+          <button type="button" class="btn zero" data-value="0">0</button>
+          <button type="button" class="btn" data-value=".">.</button>
+          <button type="button" class="btn btn-equal" data-action="calculate" aria-label="equals">=</button>
+          <button type="button" class="btn btn-op" data-value="+" aria-label="add">+</button>
+
+          <button type="button" class="btn func" data-action="sqrt" aria-label="square root">√</button>
+          <button type="button" class="btn func" data-action="percent" aria-label="percent">%</button>
+          <button type="button" class="btn func" data-action="mod" aria-label="modulo">mod</button>
+          <button type="button" class="btn func" data-value="^" aria-label="power">^</button>
+        </div>
+
+        <aside class="history" aria-label="Calculation history">
+          <h2 class="history-title">
+            History
+            <button id="clear-history" class="history-clear-btn" title="Clear history">Clear</button>
+          </h2>
+          <ul id="history-list" class="history-list" aria-live="polite"></ul>
+        </aside>
+      </div>
+
+      <footer class="card-footer">
+        <p class="muted">Designed with care • <a href="https://github.com/Ash-933/PythonCalculator" target="_blank" rel="noopener">View my Python repo on GitHub</a></p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
