@@ -13,6 +13,9 @@ This project is a fully interactive calculator I designed and developed to demon
 ### Live Demo
 [Try it here](https://ash-933.github.io/Advanced-Calculator/)  <!-- update if your published URL differs -->
 
+### Screenshot
+![Calculator UI](screenshot.png)
+
 ### Tech
 - HTML, CSS, JavaScript
 - math.js for safe expression evaluation
